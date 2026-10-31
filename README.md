@@ -47,14 +47,14 @@ Every decision is appended to `route-log.jsonl` in the plugin's data folder
 ## Try it without installing
 
 ```bash
-claude --plugin-dir ~/development/maslach/model-router
+MODEL_ROUTER_LOG=$TMPDIR/route-log.jsonl claude --plugin-dir ~/development/maslach/model-router
 ```
 
-That loads the plugin for one session only. Ask for a few delegated tasks,
-then:
+That loads the plugin for one session only, with the log at a known path.
+Ask for a few delegated tasks, then:
 
 ```bash
-node scripts/route-report.mjs ~/.claude/plugins/data/model-router/route-log.jsonl
+node scripts/route-report.mjs $TMPDIR/route-log.jsonl
 ```
 
 ## Develop
