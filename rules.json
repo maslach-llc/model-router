@@ -1,0 +1,22 @@
+{
+  "routeTypes": ["general-purpose", "claude", ""],
+  "default": null,
+  "scanChars": 600,
+  "rules": [
+    {
+      "name": "escalate-hard",
+      "model": "opus",
+      "pattern": "\\b(security|vulnerab\\w*|architect\\w*|design (a|the)|trade-?offs?|root cause|race condition|concurrency|deadlock|migration plan|review)\\b"
+    },
+    {
+      "name": "cheap-lookup",
+      "model": "haiku",
+      "pattern": "\\b(find|search|locate|grep|list|where is|which files?|summari[sz]e|read (the )?logs?|count|inventory|look up)\\b"
+    },
+    {
+      "name": "mid-edit",
+      "model": "sonnet",
+      "pattern": "\\b(implement|write (unit )?tests?|refactor|rename|fix|update|add|port|convert|run (the )?tests?)\\b"
+    }
+  ]
+}

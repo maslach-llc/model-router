@@ -1,0 +1,7 @@
+{
+  "name": "model-router",
+  "version": "0.1.0",
+  "description": "Rule-based model routing for Claude Code subagents: cheap models for search and reading, mid models for well-specified edits, the big model for planning and review.",
+  "author": { "name": "Maslach LLC", "email": "hello@maslach.com" },
+  "license": "MIT"
+}

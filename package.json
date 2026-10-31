@@ -1,0 +1,14 @@
+{
+  "name": "model-router",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rule-based model routing for Claude Code subagents",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "lint": "node --check lib/router.mjs && node --check scripts/route-agent.mjs && node --check scripts/session-context.mjs && node --check scripts/route-report.mjs && node -e \"JSON.parse(require('fs').readFileSync('rules.json'));JSON.parse(require('fs').readFileSync('hooks/hooks.json'));JSON.parse(require('fs').readFileSync('.claude-plugin/plugin.json'))\"",
+    "report": "node scripts/route-report.mjs"
+  }
+}

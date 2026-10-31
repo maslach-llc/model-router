@@ -1,0 +1,20 @@
+{
+  "description": "Route subagent calls to a model by rules, and tell the main session which agents exist",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/session-context.mjs\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Agent",
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/route-agent.mjs\"", "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}
