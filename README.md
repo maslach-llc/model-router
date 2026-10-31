@@ -1,11 +1,14 @@
 # model-router
 
+![status: beta](https://img.shields.io/badge/status-beta-orange)
+
 Rule-based model routing for Claude Code, as a plugin. Cheap work (finding
 files, reading logs, summarising) runs on Haiku, well-specified edits run on
 Sonnet, and review, security and design questions run on Opus, while the main
 session stays on whatever model you chose. Node only, no dependencies.
 
-Status: prototype. Nothing here is installed anywhere yet.
+Status: beta. A working prototype that has not been run in daily use yet;
+the rules, agent names and hook output may change without notice.
 
 ## Why subagents, not switching the main model
 

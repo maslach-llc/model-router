@@ -1,6 +1,6 @@
 {
   "name": "model-router",
-  "version": "0.1.0",
+  "version": "0.1.0-beta",
   "private": true,
   "description": "Rule-based model routing for Claude Code subagents",
   "type": "module",
